@@ -131,5 +131,11 @@ It is possible to place views in sub directories of the view base directory, for
 View::render('layouts/master');
 ```
 
+## Escape values
+To prevent html injection, values to be displayed in the view can be escaped using the e method
+
+```php
+<div><?= View::e($_GET['user']) ?></div>
+```
 
 
