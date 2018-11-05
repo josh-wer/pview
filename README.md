@@ -1,4 +1,4 @@
-# pview
+# view
 A View class for php views. It includes the core features of a conventional view library, but is light weight and uses pure php syntax, no compiling and no need to learn a new syntax.
 
 ## Installation
@@ -59,7 +59,7 @@ template.view.php is a master template view which home.view.php and about.view.p
 
 <?php View::section('content') ?>
 <h1>Hello World</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate minima odit sunt cum. Aliquam recusandae eum in. Debitis magni in error, est sed minus, molestiae. Beatae, quae ea error sequi.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 <?php View::endsection() ?>
 
 <?php View::extend('template') ?>
@@ -72,7 +72,7 @@ template.view.php is a master template view which home.view.php and about.view.p
 
 <?php View::section('content') ?>
 <h1>About Us</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate minima odit sunt cum. Aliquam recusandae eum in. Debitis magni in error, est sed minus, molestiae. Beatae, quae ea error sequi.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 <?php View::endsection() ?>
 
 <?php View::extend('template') ?>
@@ -105,7 +105,31 @@ Views can be included in other views by using the include method in the view
 </div>
 ```
 
+## Bind data
+You may need a particluar set of data to be available to a view anytime the view is called, this can be done with the bindData method, however the method call needs to be placed such that it runs before the view is requested.
 
+```php
+<?php 
+View::bindData('home', function (){
+// compact method can also be used
+$name = 'Jane Doe';
+  return [
+  'site_name' => 'My site',
+  'body' => 'Cotent in my site body',
+  'name' => $name
+  ];
+});
+
+```
+In the above example, the variables $site_name, $body and $name would always be available in the home.view.php file
+
+## Sub directories
+It is possible to place views in sub directories of the view base directory, for instance if there is a directory layouts in the base directory and it has a view master.view.php, it can be accessed this way
+
+```php
+<?php 
+View::render('layouts/master');
+```
 
 
 
