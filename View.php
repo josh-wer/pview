@@ -164,4 +164,5 @@ class View {
   private static function filePath($view) {
     return self::$base_dir . DIRECTORY_SEPARATOR . $view . ".view.php";
   }
+  
 }
