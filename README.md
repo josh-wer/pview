@@ -5,6 +5,10 @@ A View class for php views. It includes the core features of a conventional view
 
 Download and unzip in your project directory.
 
+Or install into a composer project using
+
+composer require lydore/view
+
 ## Usage
 
 ```php
