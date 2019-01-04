@@ -1,18 +1,28 @@
 {
     "name": "lydore/view",
     "description": "A PHP View library",
+    "keywords": [
+        "view",
+        "mvc"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Lydore",
-            "email": "lydoreteam@gmail.com"
+            "name": "Joshua Uyi",
+            "email": "joshuaouyi@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^5.7.1"
+    },
     "autoload": {
         "psr-4": {
             "Lydore\\View\\": "src/Lydore/View"
         }
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
     }
 }
