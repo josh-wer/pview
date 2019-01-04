@@ -9,5 +9,12 @@
             "email": "lydoreteam@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^5.7.1",
+    },
+    "autoload": {
+        "psr-4": {
+            "Carbon\\": "src/Lydore/View"
+        }
+    }
 }
