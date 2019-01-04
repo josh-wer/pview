@@ -1,4 +1,5 @@
 <?php
+namespace Lydore\View;
 /**
  * View - A PHP View library
  *
