@@ -1,0 +1,13 @@
+{
+    "name": "lydore/view",
+    "description": "A PHP View library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lydore",
+            "email": "lydoreteam@gmail.com"
+        }
+    ],
+    "require": {}
+}
